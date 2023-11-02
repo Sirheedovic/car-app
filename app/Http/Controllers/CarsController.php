@@ -101,7 +101,7 @@ class CarsController extends Controller
  */
         //to Validate the inputs
        $request->validate([
-        'name' => new Uppercase,
+        'name' => 'required|unique:cars',
         'founded' => 'required|integer|min:0|max:2023',
         'description' => 'required'
        ]);
